@@ -1,7 +1,7 @@
 
 <p>login-player works!</p>
 
-<form *ngIf="login1">
+<form >
   <div class="form-group">
     <label for="Fname">First Name</label>
     <input type="text" class="form-control" id="Fname" required [(ngModel)]="loginPlayerViewmodel.FName" name="name">
@@ -10,9 +10,12 @@
     <label for="Lname">Last Name</label>
     <input type="text" class="form-control" id="Lname" required [(ngModel)]="loginPlayerViewmodel.LName" name="name">
   </div>
+  <button onsubmit="OnSubmit()">Submit</button>
 </form>
-
+{{loginPlayerViewmodel.FName}}
+{{loginPlayerViewmodel.LName}}
 <br>
 
+<app-player-details [playerViewModel] = "playerViewModel"></app-player-details>
 
 

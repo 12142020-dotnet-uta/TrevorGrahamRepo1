@@ -9,7 +9,7 @@ import { RpsApiServiceService } from '../rps-api-service.service';
   styleUrls: ['./login-player.component.css']
 })
 export class LoginPlayerComponent implements OnInit {
-  loginPlayerViewmodel: LoginPlayerViewmodel;
+  loginPlayerViewmodel: LoginPlayerViewmodel=new LoginPlayerViewmodel();
   playerViewModel:PlayerViewModel;
 
   @Input() login1:boolean = false;

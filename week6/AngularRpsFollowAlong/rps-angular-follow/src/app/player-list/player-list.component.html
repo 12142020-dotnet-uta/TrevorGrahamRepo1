@@ -1,0 +1,14 @@
+<p>player-list works!</p>
+
+<div *ngFor="let player of playerList">
+  <div>
+    {{player.fName}}
+    {{player.lName}}
+    {{player.numWins}}
+    {{player.numLosses}}
+    <a (click)='PlayerDetails(player.playerId)'>Details</a>
+    <a (click)='EditPlayer(player.playerId)'>Edit</a>
+  </div>
+</div>
+<app-player-details [playerViewModel]="selectedPlayer"></app-player-details>
+<app-edit-player>[playerViewModel]="selectedPlayer"</app-edit-player>

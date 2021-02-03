@@ -1,0 +1,21 @@
+<p>edit-player works!</p>
+
+<form >
+  <div class="form-group">
+    <label for="Fname">First Name</label>
+    <input type="text" class="form-control" id="Fname" required [(ngModel)]="selectedPlayer.fName" name="name">
+  </div>
+  <div class="form-group">
+    <label for="Lname">Last Name</label>
+    <input type="text" class="form-control" id="Lname" required [(ngModel)]="selectedPlayer.lName" name="name">
+  </div>
+  <div class="form-group">
+    <label for="Lname">Wins</label>
+    <input type="text" class="form-control" id="Lname" value="selectedPlayer.numWins" name="name" readonly>
+  </div>
+  <div class="form-group">
+    <label for="Lname">Losses</label>
+    <input type="text" class="form-control" id="Lname" value="selectedPlayer.numLosses" name="name" readonly>
+  </div>
+  <button type="button" class="btn btn-default" (click)="OnSubmit()">Submit</button>
+</form>
